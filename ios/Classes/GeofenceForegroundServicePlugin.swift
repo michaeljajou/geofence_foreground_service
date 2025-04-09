@@ -17,11 +17,7 @@ public class GeofenceForegroundServicePlugin: NSObject, FlutterPlugin {
 
     public static func register(with registrar: FlutterPluginRegistrar) {
         let instance = GeofenceForegroundServicePlugin()
-
         instance.locationManager.delegate = instance
-
-        instance.locationManager.requestAlwaysAuthorization()
-
         instance.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         instance.locationManager.distanceFilter = 1.0
 
